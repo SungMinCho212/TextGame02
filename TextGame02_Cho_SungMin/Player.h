@@ -5,7 +5,8 @@ using namespace std;
 
 class Monster; // 전방 선언
 
-class Player {
+class Player 
+{
 public:
     Player(string nickname);
 

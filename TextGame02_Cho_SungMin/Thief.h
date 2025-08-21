@@ -1,7 +1,8 @@
 #pragma once
 #include "Player.h"
 
-class Thief : public Player {
+class Thief : public Player 
+{
 public:
     explicit Thief(string nickname);
     void attack() override;

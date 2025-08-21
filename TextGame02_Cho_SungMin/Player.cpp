@@ -2,11 +2,10 @@
 #include "Monster.h"
 
 Player::Player(string nickname)
-    : job_name("Unemployed"), nickname(nickname), level(1),
-    HP(50), MP(30), power(10), defence(5), accuracy(80), speed(10) {
-}
+    : job_name("Unemployed"), nickname(nickname), level(1), HP(50), MP(30), power(10), defence(5), accuracy(80), speed(10) {}
 
-void Player::printPlayerStatus() const { // <-- const 일치
+void Player::printPlayerStatus() const 
+{
     cout << "------------------------------------" << endl;
     cout << "* 현재 능력치" << endl;
     cout << "닉네임: " << nickname << endl;
@@ -20,7 +19,7 @@ void Player::printPlayerStatus() const { // <-- const 일치
     cout << "------------------------------------" << endl;
 }
 
-// getter들 전부 const 일치
+
 string Player::getJobName()   const { return job_name; }
 string Player::getNickname()  const { return nickname; }
 int    Player::getLevel()     const { return level; }
@@ -31,15 +30,22 @@ int    Player::getDefence()   const { return defence; }
 int    Player::getAccuracy()  const { return accuracy; }
 int    Player::getSpeed()     const { return speed; }
 
-// setter는 그대로
+
 void Player::setNickname(string nickname) { this->nickname = nickname; }
 
-bool Player::setHP(int HP) {
-    if (HP > 0) { this->HP = HP; return true; }
+bool Player::setHP(int HP) 
+{
+    if (HP > 0)
+    { this->HP = HP; return true; }
+
     this->HP = 0; return false;
 }
-bool Player::setMP(int MP) {
-    if (MP > 0) { this->MP = MP; return true; }
+
+bool Player::setMP(int MP) 
+{
+    if (MP > 0) 
+    { this->MP = MP; return true; }
+
     this->MP = 0; return false;
 }
 void Player::setPower(int power) { this->power = power; }
